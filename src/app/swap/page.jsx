@@ -1,7 +1,7 @@
 "use client"
 
 import { createJupiterApiClient } from '@jup-ag/api';
-import React, { useState } from 'react';
+import React, { useState  } from 'react';
 
 const USDC_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
 const WRAPPED_ETH_MINT = "2FPyTwcZLUg1MDrwsyoP4D6s1tM7hAkHYRjkNb5w6Pxk";
@@ -34,6 +34,7 @@ async function getSwapQuotes(usdcAmount) {
 }
 
 export default function BalancedSwapPage() {
+   
     const [usdcAmount, setUsdcAmount] = useState('');
     const [quoteResults, setQuoteResults] = useState(null);
 
