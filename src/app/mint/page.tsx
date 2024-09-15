@@ -1,9 +1,9 @@
-import {
-    mintTo,
-    createMint,
-    createAssociatedTokenAccount,
-    getAssociatedTokenAddress,
-  } from "@solana/spl-token";
+// import {
+//     mintTo,
+//     createMint,
+//     createAssociatedTokenAccount,
+//     getAssociatedTokenAddress,
+//   } from "@solana/spl-token";
 
 const Mint = () => {
     return (
