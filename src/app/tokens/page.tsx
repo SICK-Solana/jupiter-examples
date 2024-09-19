@@ -1,8 +1,18 @@
 "use client"
 import { useEffect, useState } from 'react';
-
+import Image from 'next/image';
 export default function TokensPage() {
-  const [tokens, setTokens] = useState<any[]>([]);
+
+  interface Token {
+    address: string;
+    symbol: string;
+    name: string;
+    logoURI?: string;
+  }
+  
+
+
+  const [tokens, setTokens] = useState<Token[]>([]);
   const [totalTokens, setTotalTokens] = useState<number>(0);
   const [error, setError] = useState<string | null>(null);
 
@@ -48,7 +58,7 @@ export default function TokensPage() {
               <tr key={token.address} className="border-b border-gray-700 hover:bg-gray-600 transition-colors">
                 <td className="px-6 py-4">
                   {token.logoURI ? (
-                    <img
+                    <Image
                       src={token.logoURI}
                       alt={token.name}
                       className="w-8 h-8 rounded-full"
